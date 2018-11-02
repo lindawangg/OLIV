@@ -15,6 +15,6 @@ DETECT_THRESHOLD = 0.4
 
 NUM_CLASSES = 90
 
-ALLOWED_CLASSES = ['bottle','knife','spoon','fork','cup','bowl','dog', 'kettle', 'cell phone', 'laptop', 'keyboard']
-REFERENCE_OBJECTS = ['laptop','keyboard']
+ALLOWED_CLASSES = ['bottle','knife','spoon','fork','cup','bowl','dog', 'kettle', 'cell phone', 'laptop', 'keyboard', 'tv']
+REFERENCE_OBJECTS = ['laptop','keyboard', 'tv']
 

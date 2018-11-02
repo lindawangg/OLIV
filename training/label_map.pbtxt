@@ -1,0 +1,104 @@
+item {
+	id: 1
+	name: 'bottle'
+}
+item {
+	id: 2
+	name: 'person'
+}
+item {
+	id: 3
+	name: 'backpack'
+}
+item {
+	id: 4
+	name: 'handbag'
+}
+item {
+	id: 5
+	name: 'umbrella'
+}
+item {
+	id: 6
+	name: 'bowl' 
+}
+item {
+	id: 7
+	name: 'cup' 
+}
+item {
+	id: 8
+	name: 'clock' 
+}
+item {
+	id: 9
+	name: 'knife' 
+}
+item {
+	id: 10
+	name: 'spoon'
+}
+item {
+	id: 11
+	name: 'fork'
+}
+item {
+	id: 12
+	name: 'chair'
+}
+item {
+	id: 13
+	name: 'potted plant'
+}
+item {
+	id: 14
+	name: 'dining table'
+}
+item {
+	id: 15
+	name: 'keyboard'
+}
+item {
+	id: 16
+	name: 'mouse'
+}
+item {
+	id: 17
+	name: 'laptop'
+}
+item {
+	id: 18
+	name: 'cell phone'
+}
+item {
+	id: 19
+	name: 'scissors'
+}
+item {
+	id: 20
+	name: 'book'
+}
+item {
+	id: 21
+	name: 'monitor'
+}
+item {
+	id: 22
+	name: 'coffee maker'
+}
+item {
+	id: 23
+	name: 'filing cabinet'
+}
+item {
+	id: 24
+	name: 'pencil box'
+}
+item {
+	id: 25
+	name: 'pencil sharpener'
+}
+item {
+	id: 26
+	name: 'lamp'
+}
