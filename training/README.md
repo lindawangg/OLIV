@@ -32,6 +32,7 @@
 2. Add models/research and models/research/slim to PYTHONPATH
 3. run model_main.py
 ```sh
-python object_detection/model_main.py \ --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/pipeline.config \ --model_dir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/ \
---alsologtostderr
+python object_detection/model_main.py \
+  --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/pipeline.config \ --model_dir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/ \
+  --alsologtostderr
 ```
