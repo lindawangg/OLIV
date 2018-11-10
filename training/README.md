@@ -1,5 +1,20 @@
 # Training Steps
 
+## Directory Structure
+```
++data
+  -label_map file
+  -train TFRecord file
+  -eval TFRecord file
+  -test TFRecord file
+  +images
++models
+  + ssd_mobilenet_1_224
+    -pipeline config file
+    +train
+    +eval
+```
+
 ## Datasets
 1. Download COCO 2017 train/val images and annotations
 2. Move downloaded images and annotations to data folder
