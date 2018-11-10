@@ -82,23 +82,3 @@ item {
 	id: 21
 	name: 'monitor'
 }
-item {
-	id: 22
-	name: 'coffee maker'
-}
-item {
-	id: 23
-	name: 'filing cabinet'
-}
-item {
-	id: 24
-	name: 'pencil box'
-}
-item {
-	id: 25
-	name: 'pencil sharpener'
-}
-item {
-	id: 26
-	name: 'lamp'
-}
