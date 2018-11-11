@@ -9,3 +9,7 @@ data/annotations/
 *.ckpt.*
 *.pb
 checkpoint
+*.ckpt*
+eval_0/
+*events.out*
+*.pbtxt
