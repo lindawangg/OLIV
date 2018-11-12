@@ -25,7 +25,9 @@
 7. data is now ready for training
 
 ## Models
-1. ssd mobilenet v1 (depth_multiplier=1.0, input=224x224)
+1. ssd mobilenet v1 (depth_multiplier=1.0, input=224x224, classification) pretrained on imageNet
+https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html
+2. ssd mobilenet v2 - https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet/README.md
 
 ## Training
 1. Set CUDA_VISIBLE_DEVICES=X
@@ -36,4 +38,8 @@ python object_detection/model_main.py \
   --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/pipeline.config \
   --model_dir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/ \
   --alsologtostderr
+```
+4. view progress on tensorboard
+```sh
+tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/
 ```
