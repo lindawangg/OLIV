@@ -6,7 +6,7 @@ OLIV is a novel end-to-end artificial intelligence-powered assistant system desi
 1. [Systems introduction paper](Papers/2018_OLIV_intro.pdf)
 
 ## Collaborators
-* Linda Wang [lindawangg](https://github.com/lindawangg) [profile](lindawangg.github.io)
+* Linda Wang [lindawangg](https://github.com/lindawangg) [profile](https://lindawangg.github.io)
 * Alexander Wong [profile](http://www.eng.uwaterloo.ca/~a28wong/)
 * Anshuman Patnik [patnaa2](https://github.com/patnaa2)
 * Edrick Wong [edrickwong](https://github.com/edrickwong)
