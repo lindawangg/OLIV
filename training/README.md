@@ -43,3 +43,6 @@ python object_detection/model_main.py \
 ```sh
 tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/
 ```
+
+## Issues
+1. https://github.com/tensorflow/models/issues/1795
