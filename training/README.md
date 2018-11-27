@@ -58,10 +58,10 @@ EXPORT_DIR=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/export/ssd_mob
 4. From models/research, run object_detection/export_inference_graph.py
 ```sh
 python object_detection/export_inference_graph.py \
---input_type=$INPUT_TYPE \
---pipeline_config_path=$PIPELINE_CONFIG_PATH \
---trained_checkpoint_prefix=$TRAINED_CKPT_PREFIX \
---output_directory=$EXPORT_DIR
+  --input_type=$INPUT_TYPE \
+  --pipeline_config_path=$PIPELINE_CONFIG_PATH \
+  --trained_checkpoint_prefix=$TRAINED_CKPT_PREFIX \
+  --output_directory=$EXPORT_DIR
 ```
 
 ## Issues
