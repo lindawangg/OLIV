@@ -13,6 +13,7 @@
     -pipeline config file
     +train
     +eval
+    +export
 ```
 
 ## Datasets
@@ -42,6 +43,25 @@ python object_detection/model_main.py \
 4. view progress on tensorboard
 ```sh
 tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/
+```
+
+## Exporting Model
+1. Set CUDA_VISIBLE_DEVICES=X
+2. Set PYTHONPATH=${PATH_TO_models/research}
+3. Declare variables
+```sh
+INPUT_TYPE=image_tensor
+PIPELINE_CONFIG_PATH=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/pipeline.config
+TRAINED_CKPT_PREFIX=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/model.ckpt-300000
+EXPORT_DIR=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/export/ssd_mobilenetv2_1_224_300000
+```
+4. From models/research, run object_detection/export_inference_graph.py
+```sh
+python object_detection/export_inference_graph.py \
+--input_type=$INPUT_TYPE \
+--pipeline_config_path=$PIPELINE_CONFIG_PATH \
+--trained_checkpoint_prefix=$TRAINED_CKPT_PREFIX \
+--output_directory=$EXPORT_DIR
 ```
 
 ## Issues

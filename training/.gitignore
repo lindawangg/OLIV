@@ -13,4 +13,3 @@ checkpoint
 eval_0/
 *events.out*
 *.pbtxt
-export/
