@@ -9,11 +9,19 @@
   -test TFRecord file
   +images
 +models
-  + ssd_mobilenet_1_224
+  +ssd_mobilenetv2_1_224
     -pipeline config file
-    +train
-    +eval
     +export
+      -frozen .pb graph
+      -checkpoint
+      -ckpt
+      +saved_model
+  +ssd_mobilenetv2_1_192
+  +ssd_mobilenetv2_1_160
+  +ssd_mobilenetv2_1_128
+  +ssd_mobilenetv2_14_224
+  +ssd_mobilenetv2_075_224
+  +ssd_mobilenetv2_05_224
 ```
 
 ## Datasets
@@ -26,9 +34,9 @@
 7. data is now ready for training
 
 ## Models
-1. ssd mobilenet v1 (depth_multiplier=1.0, input=224x224, classification) pretrained on imageNet
+1. mobilenet v1 pretrained on ImageNet
 https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html
-2. ssd mobilenet v2 - https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet/README.md
+2. mobilenet v2 pretrained on ImageNet https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet/README.md
 
 ## Training
 1. Set CUDA_VISIBLE_DEVICES=X
@@ -36,13 +44,26 @@ https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html
 3. run model_main.py
 ```sh
 python object_detection/model_main.py \
-  --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/pipeline.config \
-  --model_dir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/ \
+  --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/pipeline.config \
+  --model_dir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/ \
   --alsologtostderr
 ```
 4. view progress on tensorboard
 ```sh
-tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenet_1_224/
+tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/
+```
+
+## Evaluation
+1. Set CUDA_VISIBLE_DEVICES=X
+2. Set PYTHONPATH=${PATH_TO_models/research}
+3. Change pipeline config eval path to test.record and set num_examples to exact number of test images
+4. run model_main.py
+```sh
+python object_detection/model_main.py \
+  --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/pipeline.config \
+  --model_dir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/ \
+  --checkpoint_dir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/ \
+  --alsologtostderr
 ```
 
 ## Exporting Model
