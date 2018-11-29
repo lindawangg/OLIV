@@ -4,7 +4,7 @@ data/train_coco.csv
 data/test_coco.csv
 data/images/
 data/annotations/
-.ipynb_checkpoint*
+*.ipynb_checkpoint*
 *.record
 eval_0/
 *events.out*
@@ -16,3 +16,4 @@ models/ssd_mobilenetv2*/mobilenet*
 models/ssd_mobilenetv2*/eval*
 ssd_mobilenet_1_224/
 ssd_mobilenet_v2/
+data/samples_images
