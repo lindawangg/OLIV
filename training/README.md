@@ -57,12 +57,19 @@ tensorboard --logdir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/
 1. Set CUDA_VISIBLE_DEVICES=X
 2. Set PYTHONPATH=${PATH_TO_models/research}
 3. Change pipeline config eval path to test.record and set num_examples to exact number of test images
-4. run model_main.py
+4. Declare variables
+```sh
+PIPELINE_CONFIG_PATH=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/pipeline.config
+MODEL_DIR=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/
+CHECKPOINT_DIR=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/
+```
+5. Run model_main.py
 ```sh
 python object_detection/model_main.py \
-  --pipeline_config_path=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/pipeline.config \
-  --model_dir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/ \
-  --checkpoint_dir=/home/linda/OLIV/training/models/ssd_mobilenetv2_1_224/ \
+  --pipeline_config_path=$PIPELINE_CONFIG_PATH \
+  --model_dir=$MODEL_DIR \
+  --checkpoint_dir=$CHECKPOINT_DIR \
+  --run_once=True \
   --alsologtostderr
 ```
 
