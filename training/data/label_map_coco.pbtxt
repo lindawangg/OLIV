@@ -1,320 +1,320 @@
 item {
 	id: 1
-	name:: 'person'
+	name: 'person'
 }
 item {
 	id: 2
-	name:: 'bicycle'
+	name: 'bicycle'
 }
 item {
 	id: 3
-	name:: 'car'
+	name: 'car'
 }
 item {
 	id: 4
-	name:: 'motorcycle'
+	name: 'motorcycle'
 }
 item {
 	id: 5
-	name:: 'airplane'
+	name: 'airplane'
 }
 item {
 	id: 6
-	name:: 'bus'
+	name: 'bus'
 }
 item {
 	id: 7
-	name:: 'train'
+	name: 'train'
 }
 item {
 	id: 8
-	name:: 'truck'
+	name: 'truck'
 }
 item {
 	id: 9
-	name:: 'boat'
+	name: 'boat'
 }
 item {
 	id: 10
-	name:: 'traffic light'
+	name: 'traffic light'
 }
 item {
 	id: 11
-	name:: 'fire hydrant'
+	name: 'fire hydrant'
 }
 item {
 	id: 12
-	name:: 'stop sign'
+	name: 'stop sign'
 }
 item {
 	id: 13
-	name:: 'parking meter'
+	name: 'parking meter'
 }
 item {
 	id: 14
-	name:: 'bench'
+	name: 'bench'
 }
 item {
 	id: 15
-	name:: 'bird'
+	name: 'bird'
 }
 item {
 	id: 16
-	name:: 'cat'
+	name: 'cat'
 }
 item {
 	id: 17
-	name:: 'dog'
+	name: 'dog'
 }
 item {
 	id: 18
-	name:: 'horse'
+	name: 'horse'
 }
 item {
 	id: 19
-	name:: 'sheep'
+	name: 'sheep'
 }
 item {
 	id: 20
-	name:: 'cow'
+	name: 'cow'
 }
 item {
 	id: 21
-	name:: 'elephant'
+	name: 'elephant'
 }
 item {
 	id: 22
-	name:: 'bear'
+	name: 'bear'
 }
 item {
 	id: 23
-	name:: 'zebra'
+	name: 'zebra'
 }
 item {
 	id: 24
-	name:: 'giraffe'
+	name: 'giraffe'
 }
 item {
 	id: 25
-	name:: 'backpack'
+	name: 'backpack'
 }
 item {
 	id: 26
-	name:: 'umbrella'
+	name: 'umbrella'
 }
 item {
 	id: 27
-	name:: 'handbag'
+	name: 'handbag'
 }
 item {
 	id: 28
-	name:: 'tie'
+	name: 'tie'
 }
 item {
 	id: 29
-	name:: 'suitcase'
+	name: 'suitcase'
 }
 item {
 	id: 30
-	name:: 'frisbee'
+	name: 'frisbee'
 }
 item {
 	id: 31
-	name:: 'skis'
+	name: 'skis'
 }
 item {
 	id: 32
-	name:: 'snowboard'
+	name: 'snowboard'
 }
 item {
 	id: 33
-	name:: 'sports ball'
+	name: 'sports ball'
 }
 item {
 	id: 34
-	name:: 'kite'
+	name: 'kite'
 }
 item {
 	id: 35
-	name:: 'baseball bat'
+	name: 'baseball bat'
 }
 item {
 	id: 36
-	name:: 'baseball glove'
+	name: 'baseball glove'
 }
 item {
 	id: 37
-	name:: 'skateboard'
+	name: 'skateboard'
 }
 item {
 	id: 38
-	name:: 'surfboard'
+	name: 'surfboard'
 }
 item {
 	id: 39
-	name:: 'tennis racket'
+	name: 'tennis racket'
 }
 item {
 	id: 40
-	name:: 'bottle'
+	name: 'bottle'
 }
 item {
 	id: 41
-	name:: 'wine glass'
+	name: 'wine glass'
 }
 item {
 	id: 42
-	name:: 'cup'
+	name: 'cup'
 }
 item {
 	id: 43
-	name:: 'fork'
+	name: 'fork'
 }
 item {
 	id: 44
-	name:: 'knife'
+	name: 'knife'
 }
 item {
 	id: 45
-	name:: 'spoon'
+	name: 'spoon'
 }
 item {
 	id: 46
-	name:: 'bowl'
+	name: 'bowl'
 }
 item {
 	id: 47
-	name:: 'banana'
+	name: 'banana'
 }
 item {
 	id: 48
-	name:: 'apple'
+	name: 'apple'
 }
 item {
 	id: 49
-	name:: 'sandwich'
+	name: 'sandwich'
 }
 item {
 	id: 50
-	name:: 'orange'
+	name: 'orange'
 }
 item {
 	id: 51
-	name:: 'broccoli'
+	name: 'broccoli'
 }
 item {
 	id: 52
-	name:: 'carrot'
+	name: 'carrot'
 }
 item {
 	id: 53
-	name:: 'hot dog'
+	name: 'hot dog'
 }
 item {
 	id: 54
-	name:: 'pizza'
+	name: 'pizza'
 }
 item {
 	id: 55
-	name:: 'donut'
+	name: 'donut'
 }
 item {
 	id: 56
-	name:: 'cake'
+	name: 'cake'
 }
 item {
 	id: 57
-	name:: 'chair'
+	name: 'chair'
 }
 item {
 	id: 58
-	name:: 'couch'
+	name: 'couch'
 }
 item {
 	id: 59
-	name:: 'potted plant'
+	name: 'potted plant'
 }
 item {
 	id: 60
-	name:: 'bed'
+	name: 'bed'
 }
 item {
 	id: 61
-	name:: 'dining table'
+	name: 'dining table'
 }
 item {
 	id: 62
-	name:: 'toilet'
+	name: 'toilet'
 }
 item {
 	id: 63
-	name:: 'tv'
+	name: 'tv'
 }
 item {
 	id: 64
-	name:: 'laptop'
+	name: 'laptop'
 }
 item {
 	id: 65
-	name:: 'mouse'
+	name: 'mouse'
 }
 item {
 	id: 66
-	name:: 'remote'
+	name: 'remote'
 }
 item {
 	id: 67
-	name:: 'keyboard'
+	name: 'keyboard'
 }
 item {
 	id: 68
-	name:: 'cell phone'
+	name: 'cell phone'
 }
 item {
 	id: 69
-	name:: 'microwave'
+	name: 'microwave'
 }
 item {
 	id: 70
-	name:: 'oven'
+	name: 'oven'
 }
 item {
 	id: 71
-	name:: 'toaster'
+	name: 'toaster'
 }
 item {
 	id: 72
-	name:: 'sink'
+	name: 'sink'
 }
 item {
 	id: 73
-	name:: 'refrigerator'
+	name: 'refrigerator'
 }
 item {
 	id: 74
-	name:: 'book'
+	name: 'book'
 }
 item {
 	id: 75
-	name:: 'clock'
+	name: 'clock'
 }
 item {
 	id: 76
-	name:: 'vase'
+	name: 'vase'
 }
 item {
 	id: 77
-	name:: 'scissors'
+	name: 'scissors'
 }
 item {
 	id: 78
-	name:: 'teddy bear'
+	name: 'teddy bear'
 }
 item {
 	id: 79
-	name:: 'hair drier'
+	name: 'hair drier'
 }
 item {
 	id: 80
-	name:: 'toothbrush'
+	name: 'toothbrush'
 }
