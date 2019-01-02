@@ -4,7 +4,9 @@ data/train_coco.csv
 data/test_coco.csv
 data/images/
 data/annotations/
-*.ipynb_checkpoint*
+data/train_fullcoco.csv
+data/test_fullcoco.csv
+*ipynb_checkpoint*
 *.record
 eval_0/
 *events.out*

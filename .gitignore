@@ -1,3 +1,2 @@
-training/data
 *.ipynb_checkpoint*
 *__pycache__*
