@@ -1,0 +1,39 @@
+{
+    "images": [{
+        "file_name": "000000394940.jpg",
+        "height": 640,
+        "width": 426,
+        "id":  289343
+    }, {
+        "file_name": "000000015335.jpg",
+        "height": 480,
+        "width": 640,
+        "id": 61471
+    }],
+    "annotations": [{
+        "image_id": 289343,
+        "bbox": [473.07, 395.93, 38.65, 28.67],
+        "category_id": 18,
+        "id": 1,
+        "iscrowd": 0,
+        "area": 1108.0955
+    }, {
+        "image_id": 61471,
+        "bbox": [272.1, 200.23, 151.97, 279.77],
+        "category_id": 18,
+        "id": 2,
+        "iscrowd": 0,
+        "area": 42516.6469
+    }, {
+        "image_id": 61471,
+        "bbox": [124.71, 196.18, 372.85, 356.81],
+        "category_id": 18,
+        "id": 3,
+        "iscrowd": 0,
+        "area": 133036.6085
+    }],
+    "categories": [{
+        "id": 18,
+        "name": "dog"
+    }]
+}
