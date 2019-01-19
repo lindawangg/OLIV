@@ -72,6 +72,10 @@ python object_detection/model_main.py \
   --run_once=True \
   --alsologtostderr
 ```
+To evaluate the frozen graph using cocoapi:
+1. Export JSON ground truth file using data/csv2cocojson.ipynb
+2. Export JSON test results using eval/detect_objects.ipynb
+3. Evaluate using eval/eval_map.ipynb
 
 ## Exporting Model
 1. Set CUDA_VISIBLE_DEVICES=X
