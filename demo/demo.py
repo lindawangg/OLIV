@@ -5,14 +5,14 @@ import argparse
 import multiprocessing
 import numpy as np
 import tensorflow as tf
-from gtts import gTTS
+#from gtts import gTTS
 
 from utils.app_utils import FPS, WebcamVideoStream
 from multiprocessing import Queue, Pool
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
-from utils.defaults import * 
+from utils.defaults import *
 
 # load label map
 label_map =  label_map_util.load_labelmap(PATH_TO_LABELS)
@@ -80,7 +80,7 @@ def detect_objects(image_np, sess, detection_graph, displaced_obj):
 					min_dist = abs(obj_midpoint - ref_midpoint)
 					closest_ref = ref
 
-			# find position relative to reference object 
+			# find position relative to reference object
 			ref_xmin = ref_box[closest_ref][1]
 			ref_xmax = ref_box[closest_ref][3]
 			obj_xmin = class_box[displaced_obj][1]
@@ -92,10 +92,10 @@ def detect_objects(image_np, sess, detection_graph, displaced_obj):
 			else: # right
 				position = 'right'
 
-			# say to user 
+			# say to user
 			if position == 'front':
 				print('%s is in front of the %s' % (displaced_obj, closest_ref))
-			else: 
+			else:
 				print('%s is to the %s of the %s' % (displaced_obj, position, closest_ref))
 
 	# Visualization of the results of a detection.
@@ -137,7 +137,7 @@ def worker(input_q, output_q, request_q, displaced_obj):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-src', '--source', dest='video_source', type=int,
-						default=1, help='Device index of the camera.')
+						default=-1, help='Device index of the camera.')
 	parser.add_argument('-wd', '--width', dest='width', type=int,
 						default=1600, help='Width of the frames in the video stream.')
 	parser.add_argument('-ht', '--height', dest='height', type=int,
