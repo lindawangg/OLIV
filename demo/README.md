@@ -2,7 +2,9 @@
 
 ## Installation
 Disclaimer: This demo is only tested on Ubuntu 16.04
+```bash
 pip install -r requirements.txt
+```
 
 ## To run
 To start demo:
@@ -10,6 +12,7 @@ To start demo:
 python demo.py
 ```
 To end demo: press 'q'
+
 To kill process:
 ```bash
 ps aux | grep demo.py | grep -v grep | awk -F ' ' '{print $2}' | sort | head -1 | xargs kill -9
