@@ -8,11 +8,24 @@ import tensorflow as tf
 #from gtts import gTTS
 
 from utils.app_utils import FPS, WebcamVideoStream
-from multiprocessing import Queue, Pool
+from multiprocessing import Queue, Pool, Process
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
 from utils.defaults import *
+
+import smtplib
+import time
+import imaplib
+import email
+
+FROM_EMAIL  = "sydeitemidentifer@gmail.com"
+FROM_PWD    = "SydeFr334all"
+SMTP_SERVER = "imap.gmail.com"
+SMTP_PORT   = 993
+
+mail = imaplib.IMAP4_SSL(SMTP_SERVER, SMTP_PORT)
+mail.login(FROM_EMAIL, FROM_PWD)
 
 # load label map
 label_map =  label_map_util.load_labelmap(PATH_TO_LABELS)
@@ -125,14 +138,49 @@ def worker(input_q, output_q, request_q, displaced_obj):
 
 	fps = FPS().start()
 	while True:
-		#wait_for_incoming_connection()
+		# get next frame
 		fps.update()
 		frame = input_q.get()
 		frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-		output_q.put(detect_objects(frame_rgb, sess, detection_graph, displaced_obj))
+		image = detect_objects(frame_rgb, sess, detection_graph, displaced_obj)
+
+		# get requested object
+
+		# if there is an object, build output message from objects
+
+		# print and say message
+
+		# put image in output_q
+		output_q.put(image)
 
 	fps.stop()
 	sess.close()
+
+def checkMail():
+    try:
+        mail.select('inbox')
+        (retcode, messages) = mail.search(None, '(UNSEEN)')
+
+        if (retcode == 'OK'):
+            for num in messages[0].split():
+                typ, data = mail.fetch(num, '(RFC822)' )
+                for response_part in data:
+                    if isinstance(response_part, tuple):
+                        msg = email.message_from_string(response_part[1].decode('utf-8'))
+                        email_subject = msg['subject']
+                        email_from = msg['from']
+                        if (email_subject == "ItemIdentifier."):
+                            print(msg.get_payload().strip())
+                            typ, data = mail.store(num,'+FLAGS','\\Seen')
+    except Exception as e:
+        print(str(e))
+
+def request_worker(request_q):
+	# wait for object and add to request_q when arrives
+	while 1:
+	    print('checking mail')
+	    checkMail()
+	    time.sleep(1)
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
@@ -156,6 +204,8 @@ if __name__ == '__main__':
 	output_q = Queue(maxsize=args.queue_size)
 	request_q = Queue(maxsize=args.queue_size)
 	pool = Pool(args.num_workers, worker, (input_q, output_q, request_q, args.displaced_obj))
+	request_p = Process(target=request_worker, args=(request_q,))
+	request_p.start()
 
 	video_capture = WebcamVideoStream(src=args.video_source, width=args.width, height=args.height).start()
 	#fps = FPS().start()
@@ -179,7 +229,7 @@ if __name__ == '__main__':
 	#fps.stop()
 	#print('[INFO] elapsed time (total): {:.2f}'.format(fps.elapsed()))
 	#print('[INFO] approx. FPS: {:.2f}'.format(fps.fps()))
-
+	request_p.join()
 	pool.terminate()
 	video_capture.stop()
 	cv2.destroyAllWindows()
