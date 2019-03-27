@@ -64,8 +64,7 @@ class DirectLineAPI(object):
             return jsonresponse['activities'][2]['text']
         return "error contacting bot for response"
 
-
-bot = DirectLineAPI('OzNAiUHsamo.q63XOEn6ke-xOdCGt0XJeWVff-O_dWYQcikbfjZzrS8')
-print(bot.send_message("Where is my bag?"))
-botresponse = bot.get_message()
-print(botresponse)
+#bot = DirectLineAPI('OzNAiUHsamo.q63XOEn6ke-xOdCGt0XJeWVff-O_dWYQcikbfjZzrS8')
+#print(bot.send_message("Where is my bottle?"))
+#botresponse = bot.get_message()
+#print(botresponse)
